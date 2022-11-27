@@ -1,0 +1,19 @@
+# tell brownie that whenever you run scripts grab environment variables from this file
+dotenv: .env
+
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+# exclude SafeMath while calculating test coverage
+reports:
+  exclude_contract:
+    - SafeMath
+
+# this has been depriciated
+network:
+  networks:
+    rinkeby:
+      host: https://rinkeby.infura.io/v3/aa0f2f6f106640c280b230aa9b5f36e8
+
+pinata:
+  JWT: ${JWT}
